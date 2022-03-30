@@ -1,0 +1,30 @@
+{
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "airbnb-base",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint", "graphql"],
+  "rules": {
+    "import/prefer-default-export": ["off"],
+    "no-import-module-exports": ["off"],
+    "no-console": ["warn"],
+    "import/no-unresolved": ["off"],
+    "import/extensions": ["off"],
+    "class-methods-use-this": ["off", { "exceptMethods": ["error"] }],
+    "@typescript-eslint/no-explicit-any": "off",
+    "import/no-extraneous-dependencies": [
+      "off",
+      { "devDependencies": ["**/*.test.js", "**/*.spec.js"] }
+    ]
+  }
+}
